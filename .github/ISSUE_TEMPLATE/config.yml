@@ -1,0 +1,14 @@
+# Blank issues are disabled so usage/how-to questions are routed to support
+# channels instead of the bug tracker. Flip this to `true` if you'd rather
+# keep the "Open a blank issue" option.
+blank_issues_enabled: false
+contact_links:
+  - name: 📺 How to install & use mods (instruction video)
+    url: https://youtu.be/-4DFoDnSBJ4
+    about: New to the Mod Manager? Watch this first — it covers setup, downloading and installing mods.
+  - name: 💬 Questions & help (Discord)
+    url: https://discord.gg/ZevBpxxGyg
+    about: For "how do I…" questions, setup help, and general chat. Please ask here instead of opening an issue.
+  - name: 📖 Read the changelog / README
+    url: https://github.com/Jimk72/Icarus_Software/blob/main/README.md
+    about: Recent fixes and version notes — your problem may already be addressed in a newer version.
