@@ -1,0 +1,22 @@
+name: Sync labels
+
+# Manual-only: nothing runs automatically. Go to the Actions tab, pick
+# "Sync labels", and click "Run workflow" to create/update the labels
+# defined in .github/labels.yml. It does NOT delete your existing labels.
+on:
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: EndBug/label-sync@v2
+        with:
+          config-file: .github/labels.yml
+          delete-other-labels: false
+          token: ${{ secrets.GITHUB_TOKEN }}
