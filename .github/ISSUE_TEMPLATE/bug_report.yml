@@ -1,0 +1,88 @@
+name: 🐞 Bug report
+description: Something in the Mod Manager or Mod Editor isn't working right.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! A little detail here saves a lot of back-and-forth.
+        **Before you start:** please make sure you're on the latest version (click **Check for IMM Update**) — a lot of bugs are already fixed.
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before submitting
+      options:
+        - label: I'm on the latest version (checked via "Check for IMM Update").
+          required: true
+        - label: I searched existing issues and this isn't a duplicate.
+          required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Which part?
+      description: Where does the problem happen?
+      options:
+        - Mod Manager (IMM)
+        - Mod Editor
+        - Downloading mods / updating the database
+        - Merging mods / merge options
+        - Installed mods / in-game behavior
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Mod Manager / Editor version
+      description: Shown in the title bar (e.g. "2.4.9"). The DebugLog also lists it.
+      placeholder: "2.4.9"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows 11
+        - Windows 10
+        - Linux (Wine / Proton)
+        - Other (say which in the description)
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect instead?
+      placeholder: When I click X, Y happens. I expected Z.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The exact steps so it can be reproduced.
+      placeholder: |
+        1. Open IMM
+        2. Click '...'
+        3. See the error
+    validations:
+      required: true
+  - type: textarea
+    id: debuglog
+    attributes:
+      label: DebugLog.txt
+      description: |
+        In IMM click **Create Debug Log File**, then open `DebugLog.txt` from the install folder and paste its contents here.
+        This is the single most useful thing for diagnosing a bug.
+      render: text
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If it's a UI or error-popup issue, drag images in here.
+    validations:
+      required: false
