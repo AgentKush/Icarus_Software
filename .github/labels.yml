@@ -1,0 +1,51 @@
+# Label definitions for Icarus_Software.
+# Add-only: your existing default labels (bug, enhancement, question, etc.) are
+# kept. Run the "Sync labels" workflow (Actions tab) to create/update these.
+# Colors are 6-digit hex without the leading '#'.
+
+# --- Area: which part of the software ---
+- name: "area: mod manager"
+  color: "1d76db"
+  description: "The Mod Manager app (IMM) itself"
+- name: "area: mod editor"
+  color: "1d76db"
+  description: "The Mod Editor"
+- name: "area: downloads & database"
+  color: "1d76db"
+  description: "Downloading mods, updating the database, repos.json/mods.json"
+- name: "area: merge"
+  color: "1d76db"
+  description: "Merging mods, merge options, the merged output"
+- name: "area: mod content"
+  color: "1d76db"
+  description: "A specific mod's content or behavior (often author-side)"
+
+# --- Type / triage ---
+- name: "crash"
+  color: "b60205"
+  description: "Access violation or hard crash"
+- name: "support"
+  color: "5319e7"
+  description: "How-to / usage help rather than a code defect"
+- name: "needs info"
+  color: "fbca04"
+  description: "Waiting on more details from the reporter"
+- name: "needs repro"
+  color: "fbca04"
+  description: "Can't reproduce yet — needs steps"
+- name: "upstream"
+  color: "d4c5f9"
+  description: "Root cause is the game/data or an external host, not IMM"
+- name: "translation / non-english"
+  color: "006b75"
+  description: "Report is in another language or is a localization issue"
+
+# --- Platform ---
+- name: "platform: linux"
+  color: "c5def5"
+  description: "Linux / Wine / Proton"
+
+# --- Priority ---
+- name: "priority: high"
+  color: "e11d21"
+  description: "Should be looked at soon"
