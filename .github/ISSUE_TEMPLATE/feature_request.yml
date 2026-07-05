@@ -1,0 +1,46 @@
+name: 💡 Feature request
+description: Suggest a new feature or an improvement.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this hasn't already been requested.
+          required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Which part?
+      options:
+        - Mod Manager (IMM)
+        - Mod Editor
+        - Downloads / database
+        - Merge options
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: What are you trying to do that's hard or impossible today?
+      placeholder: "When I'm managing lots of mods, I can't easily…"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to see?
+      description: Describe the feature or change.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Anything else?
+      description: Alternatives you've considered, mockups, examples from other tools, etc.
+    validations:
+      required: false
